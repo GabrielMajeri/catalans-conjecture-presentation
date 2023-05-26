@@ -1,0 +1,138 @@
+\documentclass{beamer}
+
+% Support for inserting images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Support for plotting of functions
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Better font specification support
+\usepackage{fontspec}
+
+% Encode mathematical symbols using Unicode characters
+\usepackage[
+    warnings-off={mathtools-colon,mathtools-overbracket}
+]{unicode-math}
+
+% Useful math commands
+\usepackage{amsmath}
+% Support for custom theorem environments
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{remark}{Remark}
+
+% Advanced math commands
+\usepackage{mathtools}
+
+% Support for set-builder notation
+\usepackage{braket}
+
+% Bibliography management
+\usepackage[
+    backend=biber,
+    sorting=none
+]{biblatex}
+\addbibresource{references.bib}
+
+% Support for interactive hyperlinks
+\usepackage{hyperref}
+% \hypersetup{colorlinks}
+
+% Expanded options for captions
+\usepackage{caption}
+
+% Support for commenting-out blocks of LaTeX code
+\usepackage{verbatim}
+
+% Support for creating graphics in LaTeX
+\usepackage{tikz}
+
+% For drawing commutative diagrams
+\usetikzlibrary{cd}
+
+% Coordinate computations
+\usetikzlibrary{calc}
+
+% Externalize generated graphics
+\usetikzlibrary{external}
+% \tikzexternalize[prefix=tikz/]
+
+% Change the default theme
+\usetheme{Goettingen}
+\beamertemplatenavigationsymbolsempty
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+% Render the table of contents at the start of every new section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% Declare some useful math commands
+\newcommand*{\integers}{\symbb{Z}}
+\newcommand*{\rationals}{\symbb{Q}}
+\newcommand*{\reals}{\symbb{R}}
+\newcommand*{\complex}{\symbb{C}}
+
+\newcommand*{\finitefield}[1]{\symbb{F}_{#1}}
+
+\newcommand*{\divides}{\mid}
+\newcommand*{\notdivides}{\not\mid}
+
+\newcommand*{\Gal}[2]{\symrm{Gal}\left(#1 / #2\right)}
+
+% Definitions for the absolute value and norm symbols
+% Based on https://tex.stackexchange.com/a/43009/263993
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    %
+    \let\oldnorm\norm
+    \def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+% Document metadata
+\title{Catalan's Conjecture}
+\subtitle{A journey through modern number theory}
+\author{Gabriel Majeri}
+\date{May 2023}
+%\institute{University of Bucharest}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\input{sections/1-introduction}
+\input{sections/2-euler}
+\input{sections/3-lebesgue}
+\input{sections/4-ko-chao}
+\input{sections/5-tijdeman}
+\input{sections/6-general-case}
+\input{sections/7-conclusion}
+
+\begin{frame}[t,allowframebreaks]
+    \nocite{*}
+    \frametitle{Bibliography}
+    \printbibliography
+\end{frame}
+
+\end{document}

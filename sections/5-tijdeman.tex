@@ -1,0 +1,54 @@
+\section{Tijdeman's bounds}
+
+\begin{frame}
+\frametitle{Bounding the size of possible solutions}
+
+If (non-trivial) solutions for Catalan's equation exist, how big (in absolute value) can they be?
+\end{frame}
+
+\begin{frame}
+\frametitle{Baker's theorem}
+
+To answer this question, we are going to need a result from transcendental number theory:
+\begin{theorem}[Baker, 1966]
+Let \(\alpha_1, \dots, \alpha_n\) be non-zero algebraic numbers such that \(2 \pi i, \log \alpha_1, \dots, \log \alpha_n\) are linearly independent over \(\rationals\). Then
+\[
+    \beta_1 \log \alpha_1 + \dots \beta_n \log \alpha_n \neq 0
+\]
+for any non-zero algebraic numbers \(\beta_1, \dots, \beta_n\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Baker's theorem}
+
+In fact, Baker gave quantitative and effectively computable bounds for how small the absolute value of such a linear combination could be:
+\[
+    \abs{\beta_1 \log \alpha_1 + \dots \beta_n \log \alpha_n} > H^{c}
+\]
+where \(H\) is the maximum value of the \emph{height} of the numbers \(\alpha_1, \dots, \alpha_n\) and \(c\) is an effectively computable constant.
+\end{frame}
+
+\begin{frame}
+\frametitle{Tijdeman's bounds}
+
+In 1976, Tijdeman used Baker's method to show \cite{Tijdeman1976} that the number of tuples of integers \((x, y, p, q)\) satisfying
+\[
+    x^p - y^q = 1
+\]
+is finite.
+\end{frame}
+
+\begin{frame}
+\frametitle{Tijdeman's bounds}
+
+Unfortunately, Tijdeman's method guaranteed that no solutions could exist when both \(p\) and \(q\) were greater than
+\[
+    e^{e^{e^{e^{730}}}}
+\]
+which was eventually reduced to requiring that both \(p\) and \(q\) be greater than
+\[
+    7.78 \cdot 10^{16}
+\]
+The number of possible solutions to check was still too large to be covered by computers.
+\end{frame}

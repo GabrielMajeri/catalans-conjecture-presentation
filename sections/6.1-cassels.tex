@@ -1,0 +1,43 @@
+\subsection{Cassel's relations}
+
+\begin{frame}
+\frametitle{Cassel's relations}
+
+Interest in Catalan's conjecture was rekindled in the second half of the XXth century after English mathematician J.W.S Cassel (a student of Mordell) proved the following result:
+
+\begin{theorem}[Cassel, 1960]
+If Catalan's equation has a solution for \(p\) and \(q\) \textbf{odd}, then
+\[
+    q \divides x \, \text{ and } \, \frac{x^p - 1}{x - 1} = p u^q
+\]
+for some \(u \in \integers\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cassel's relations}
+
+Cassel's proof \cite{Cassels1960} is elementary. It starts with the following lemma, which he claimed to be ``at least as old as Euler'':
+\begin{lemma}
+For any prime \(q \geq 3\) and integer \(y \neq \mp 1\), we have
+\[
+    \gcd \left(\frac{y^q \pm 1}{y \pm 1}, y \pm 1\right) \in \Set{ 1, q }
+\]
+and, if the gcd above is equal to \(q\), we also have
+\[
+    \frac{y^q \pm 1}{y \pm 1} \equiv q \mod{p^2}
+\]
+\end{lemma}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cassel's relations}
+
+All the other conclusions are derived from this lemma, by rewriting the initial equation as
+\begin{gather*}
+    x^p - y^q = 1 \iff x^p = y^q + 1 \\[0.75em]
+    \iff
+    x^p = (y + 1) \left(\frac{y^q + 1}{y + 1}\right)
+\end{gather*}
+then performing a series of calculations and estimations.
+\end{frame}
