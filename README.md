@@ -6,7 +6,7 @@ This repository contains the LaTeX source files for a presentation I gave on [Ca
 
 I gave a talk based on theses slides at the 2023 edition of the [Students' Scientific Communications Session](https://fmi.unibuc.ro/sesiune-de-comunicari-stiintifice-studentesti/) at [FMI-UniBuc](https://fmi.unibuc.ro/).
 
-You can access the rendered PDF [here](https://github.com/GabrielMajeri/catalans-conjecture-presentation/releases/download/v1.0/catalans-conjecture.pdf).
+You can access the rendered PDF [here](https://github.com/GabrielMajeri/catalans-conjecture-presentation/releases/tag/v1.0).
 
 ## License
 
